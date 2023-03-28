@@ -2,13 +2,21 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { ParticlesBackground } from './components/ParticlesBackground.jsx/ParticlesBackground'
+import Login from './components/Login/LoginMUI'
+import { UserProvider } from './context/UserContext'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <div>
+      <UserProvider>
+      <ParticlesBackground />
+      
+      <Login />
+      </UserProvider>
+{/*       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,7 +35,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </div>
   )
 }
