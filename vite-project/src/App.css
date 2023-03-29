@@ -1,9 +1,9 @@
-#root {
-  max-width: 1280px;
+/* #root {
+  max-width: 500px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 .logo {
   height: 6em;
@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -41,4 +44,15 @@
   color: #888;
 }
 
-.componentBox { border: 1px solid #000000; margin: 1em; padding: 1em; text-align: center; background: #ffffff; border-radius: 10px;}
+.componentBox {
+  border: 1px solid #000000;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+}

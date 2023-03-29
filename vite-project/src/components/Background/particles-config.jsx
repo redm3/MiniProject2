@@ -1,38 +1,38 @@
 export const particlesConfig = {
     particles: {
         number: {
-            value: 80,
+            value: 50,
             density: {
                 enable: true,
-                value_area: 800
+                value_area: 1000
             }
         },
         color: {
             value: "#0000ff", // change to blue color
             opacity: 0.9,
             animation: {
-                enable: true,
+                enable: false,
                 speed: 20,
-                sync: true
+                sync: false
             }
         },
         shape: {
             type: "circle",
             stroke: {
                 width: 0,
-                color: "#ffffff" // change to white color
+                color: "#0000ff" // change to white color
             },
             polygon: {
-                nb_sides: 5
+                nb_sides: 1
             },
             image: {
                 src: "",
-                width: 100,
-                height: 100
+                width: 200,
+                height: 200
             }
         },
         opacity: {
-            value: 0.5,
+            value: 0.9,
             random: false,
             anim: {
                 enable: false,
@@ -46,13 +46,13 @@ export const particlesConfig = {
             random: true,
             anim: {
                 enable: false,
-                speed: 20,
+                speed: 10,
                 size_min: 0.1,
                 sync: false
             }
         },
         line_linked: {
-            enable: true,
+            enable: false,
             distance: 100,
             color: "#ffffff", // change to white color
             opacity: 0.4,
@@ -81,7 +81,7 @@ export const particlesConfig = {
         detect_on: "canvas",
         events: {
             onhover: {
-                enable: true,
+                enable: false,
                 mode: "repulse"
             },
             onclick: {
@@ -92,7 +92,7 @@ export const particlesConfig = {
         },
         modes: {
             grab: {
-                distance: 400,
+                distance: 200,
                 line_linked: {
                     opacity: 1
                 }

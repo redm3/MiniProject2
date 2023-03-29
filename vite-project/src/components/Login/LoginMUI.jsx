@@ -12,8 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useTheme, createTheme, ThemeProvider } from '@mui/material/styles';
-
-
+import { navigate } from '@reach/router';
 import useFormInput from '../hooks/useFormInput';
 import { UserContext } from '../../context/UserContext';
 
@@ -67,9 +66,11 @@ export default function Login() {
         } else {
             setErrMsg('')
             setUsername(user)
+            /* navigate(window.location.href = "/dashboardpage"); */
         }
 
         setLoggedIn(isLoggedIn)
+        /* if (isLoggedIn == true) navigate("/dashboardpage"); */
     };
 
     return (
