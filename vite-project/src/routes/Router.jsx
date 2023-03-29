@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+
 import { Sidebar, Menu, MenuItem, SubMenu, useProSidebar } from "react-pro-sidebar";
 
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
@@ -18,10 +18,10 @@ import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 
 
-import Dashboard from '../pages/Dashboard';
+/* import Dashboard from '../pages/Dashboard';
 import Home from '../pages/Home';
 import Transactions from '../pages/Transactions';
-import Logout from '../pages/Logout';
+import Logout from '../pages/Logout'; */
 /* import LoginMUIPage from '../pages/LoginMUIPage'; */
 
 const Router = () => {
@@ -61,7 +61,7 @@ const Router = () => {
               component={<Link to="transactions" className="link" />}
               icon={<MonetizationOnRoundedIcon />}
             >
-              Transactions
+              Transactions 
             </MenuItem>
             <SubMenu label="Settings" icon={<SettingsApplicationsRoundedIcon />}>
               <MenuItem icon={<AccountCircleRoundedIcon />}> Account </MenuItem>
@@ -79,12 +79,8 @@ const Router = () => {
           </Menu>
         </Sidebar>
         <section>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="transactions" element={<Transactions />} />
-            <Route path="Logout" element={<Logout />} />
-          </Routes>
+      
+          <Outlet/>
         </section>
       </div>
     );

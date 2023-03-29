@@ -1,24 +1,26 @@
-import { Routes, Route, Link } from "react-router-dom";
-import LoginMUIPage from "../pages/LoginMUIPage"
+import { Routes, Route, Link, Router } from "react-router-dom";
+import LoginMUIPage from "../pages/LoginMUIPage";
 import ProtectedRoute from "./ProtectedRoute"
-import DashboardPage from "../pages/Dashboard";
+import Home from "../pages/Home";
+import Dashboard from '../pages/Dashboard';
+import Transactions from '../pages/Transactions';
+import Logout from '../pages/Logout';
 
 function AppRoutes(props) {
 
     return (
-
-        // see https://reactrouter.com/en/main/components/routes for more info
         <Routes>
-             <Route path='/LoginMUIPage' element={<LoginMUIPage {...props} />} />
-
-             <Route path='/DashboardPage' element={<DashboardPage {...props} />} >
+            <Route path='/' element={<Router {...props} />} >
+                <Route index element={<Home />} />
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="transactions" element={<Transactions />} />
+                <Route path="Logout" element={<Logout />} />
 
             </Route>
-{/* 
-            <Route path='/loginmuipage' element={<ProtectedRoute redirectPath="/dashboardpage"><LoginMUIPage {...props} /></ProtectedRoute>} />
-            <Route index element={<Dashboard {...props} />} /> */}
 
+            <Route path='/login' element={<LoginMUIPage {...props} />} />
         </Routes>
+
     )
 }
 

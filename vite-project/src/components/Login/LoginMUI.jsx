@@ -12,11 +12,11 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useTheme, createTheme, ThemeProvider } from '@mui/material/styles';
-import { navigate } from '@reach/router';
+/* import { navigate } from '@reach/router'; */
+import { useNavigate } from 'react-router-dom';
 import useFormInput from '../hooks/useFormInput';
 import { UserContext } from '../../context/UserContext';
-
-
+import s from './LoginMUI.module.scss'
 
 function Copyright(props) {
     return (
@@ -38,6 +38,7 @@ export default function Login() {
     const usernameProps = useFormInput('')
     const passwordProps = useFormInput('')
     const { username, setUsername } = React.useContext(UserContext)
+    const navigate = useNavigate()
 
     const [loggedIn, setLoggedIn] = React.useState(false)
     const [errMsg, setErrMsg] = React.useState('')
@@ -70,11 +71,11 @@ export default function Login() {
         }
 
         setLoggedIn(isLoggedIn)
-        /* if (isLoggedIn == true) navigate("/dashboardpage"); */
+        if (isLoggedIn) navigate("/dashboard");
     };
 
     return (
-        <div className="Login parentContainer">
+        <div className={s.body} >
         <div className="Login componentBox">
              {/* <CssBaseline /> */}
         {/* <ThemeProvider theme={theme}> */}
