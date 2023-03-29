@@ -23,7 +23,7 @@ function Copyright(props) {
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
             <Link color="inherit" href="https://mui.com/">
-                Your Website
+                QuickerPay
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -74,8 +74,10 @@ export default function Login() {
     };
 
     return (
+        <div className="Login parentContainer">
         <div className="Login componentBox">
-        <ThemeProvider theme={theme}>
+             {/* <CssBaseline /> */}
+        {/* <ThemeProvider theme={theme}> */}
             <Container component="main" maxWidth="xs">
                 <Box
                     sx={{
@@ -85,11 +87,11 @@ export default function Login() {
                         alignItems: 'center',
                     }}
                 >
-                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                    <Avatar sx={{ m: 2, bgcolor: 'secondary.main' }}>
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        {loggedIn ? 'Hello '+username : 'Please log in to MiniProject 2'}
+                        {loggedIn ? 'Hello '+username : 'Please log into QuickerPay'}
                     </Typography>
 
                     {!loggedIn && loginAttempts < 5 &&
@@ -146,7 +148,8 @@ export default function Login() {
                 </Box>
                 <Copyright sx={{ mt: 8, mb: 4 }} />
             </Container>
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
+        </div>
         </div>
     );
 }

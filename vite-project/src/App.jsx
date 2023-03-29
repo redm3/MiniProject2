@@ -8,17 +8,18 @@ import { MyThemeProvider } from './context/MyThemeContext'
 /* import LoginMUIPage from './pages/LoginMUIPage' */
 /* import Layout from './components/NavBar/ProSideBar' */
 /* import { Routes, Route, Link } from "react-router-dom";  */
-import DashboardPage from './pages/DashboardPage'
-import Routes from './routes/Routes'
-
+/* import DashboardPage from './pages/Dashboard' */
+import Router from './routes/Router'
 
 function App() {
 
   return (
     <div className="App">
+      <Router/>
       {/* <LoginMUIPage/> */}
-      <Routes/>
-      <DashboardPage/>
+      {/* <Layout/> */}
+
+      {/* <DashboardPage/> */}
   
 
     </div>
@@ -26,3 +27,5 @@ function App() {
 }
 
 export default App
+
+

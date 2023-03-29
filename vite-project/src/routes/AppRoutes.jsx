@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
 import LoginMUIPage from "../pages/LoginMUIPage"
 import ProtectedRoute from "./ProtectedRoute"
-import DashboardPage from "../pages/DashboardPage";
+import DashboardPage from "../pages/Dashboard";
 
 function AppRoutes(props) {
 
