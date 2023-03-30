@@ -16,6 +16,7 @@ import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import ShieldRoundedIcon from "@mui/icons-material/ShieldRounded";
 import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
+import { Link, Outlet } from "react-router-dom";
 
 
 /* import Dashboard from '../pages/Dashboard';
@@ -24,7 +25,7 @@ import Transactions from '../pages/Transactions';
 import Logout from '../pages/Logout'; */
 /* import LoginMUIPage from '../pages/LoginMUIPage'; */
 
-const Router = () => {
+const AppSidebar = () => {
     const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } =
     useProSidebar();
     return (
@@ -85,4 +86,4 @@ const Router = () => {
       </div>
     );
   };
-  export default Router;
+  export default AppSidebar;
