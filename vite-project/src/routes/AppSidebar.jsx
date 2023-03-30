@@ -17,13 +17,10 @@ import ShieldRoundedIcon from "@mui/icons-material/ShieldRounded";
 import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import { Link, Outlet } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 
-/* import Dashboard from '../pages/Dashboard';
-import Home from '../pages/Home';
-import Transactions from '../pages/Transactions';
-import Logout from '../pages/Logout'; */
-/* import LoginMUIPage from '../pages/LoginMUIPage'; */
+
 
 const AppSidebar = () => {
     const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } =
@@ -39,7 +36,7 @@ const AppSidebar = () => {
               collapseSidebar();
             }}
           >
-              <h2>QUICKERPAY</h2>
+              <h3>QUICKERPAY</h3>
             </MenuItem>
             <MenuItem
               component={<Link to="dashboard" className="link" />}
@@ -47,14 +44,32 @@ const AppSidebar = () => {
             >
               Dashboard
             </MenuItem>
-            <MenuItem icon={<ReceiptRoundedIcon />}> Invoices </MenuItem>
+            <MenuItem
+            component={<Link to="invoices" className="link" />}
+             icon={<ReceiptRoundedIcon />}
+             >
+              Invoices
+            </MenuItem>
             <SubMenu label="Charts" icon={<BarChartRoundedIcon />}>
-              <MenuItem icon={<TimelineRoundedIcon />}> Timeline Chart </MenuItem>
-              <MenuItem icon={<BubbleChartRoundedIcon />}>Bubble Chart</MenuItem>
+              <MenuItem 
+              component={<Link to="coinsummarypage" className="link" />}
+              icon={<TimelineRoundedIcon />}
+              > 
+              Coin Summary 
+              </MenuItem>
+              <MenuItem 
+              component={<Link to="cryptoprice" className="link" />}
+              icon={<BubbleChartRoundedIcon />}
+              >
+              Commodity Price
+              </MenuItem>
             </SubMenu>
             <SubMenu label="Wallets" icon={<WalletRoundedIcon />}>
-              <MenuItem icon={<AccountBalanceRoundedIcon />}>
-                Current Wallet
+              <MenuItem 
+              component={<Link to="wallet" className="link" />}
+              icon={<AccountBalanceRoundedIcon />}
+              >
+              Current Wallet
               </MenuItem>
               <MenuItem icon={<SavingsRoundedIcon />}>Savings Wallet</MenuItem>
             </SubMenu>

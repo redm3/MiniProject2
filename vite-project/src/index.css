@@ -5,21 +5,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
-  font-size: 18px;
+  font-size: 12px;
 }
 .app {
   background: #ffffff;
 }
 h1 {
   color: #000000;
-  margin: 50px;
-  font-size: 40px;
+  margin: 400px;
+  font-size: 10px;
 
 }
 .menu1 {
-  margin-top: 20px;
+  margin-top: 40px;
   
 }
 h2 {
   color: #000000;
+  font-size: 12px;
+
 }
